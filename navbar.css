@@ -8,6 +8,7 @@ header {
     background-color: #F8BBD0;
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .logo img {
@@ -100,4 +101,10 @@ input::placeholder {
     justify-content: space-between;
     cursor: pointer;
     margin: 5px;
+}
+
+@media screen and (max-width: 1110px) {
+    .menu-container{
+        display: none;
+    }
 }
