@@ -7,42 +7,41 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='cadastro.css'>
     <script src='main.js'></script>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+    </style>
 </head>
 <body>
-   <div class="container">
-       <div class="telacad">
-           <form action="">
-               <div class="titulo">
-                   <label>
-                       CADASTRAR
-                   </label>
-               </div>
-               <div>
-                <label>Nome Completo: </label> <br>
-                <input type="text" name="nome">
+    <div class="container">
+        <div class="telacad">
+            <form action="">
+                <div class="titulo">
+                    <label>CADASTRAR</label>
                 </div>
-               <div>
-                   <label>E-mail: </label> <br>
-                   <input type="email" name="email" id="email">
-               </div>
-               <div>
-                   <label>Senha: </label> <br>
-                   <input type="password" name="senha">
-               </div>
-               <div>
-                <label>Confirmar Senha: </label> <br>
-                <input type="password" name="senhaconf">
+                <div>
+                    <label>Nome Completo:</label> 
+                    <input type="text" name="nome">
                 </div>
-               <div class="button">
-                   <input type="button" onclick="funcao()" value="Acessar"
-                   >
-               </div>
-               <div class="link">
-                   <a href="login.html" class="login-link" style="color: white;">Já tem uma conta? Faça login</a>
-               </div>
-               
-           </form>
-       </div>
-   </div>
+                <div>
+                    <label>E-mail:</label> 
+                    <input type="email" name="email">
+                </div>
+                <div>
+                    <label>Senha:</label> 
+                    <input type="password" name="senha">
+                </div>
+                <div>
+                    <label>Confirmar Senha:</label> 
+                    <input type="password" name="senhaconf">
+                </div>
+                <div class="button">
+                    <input type="button" onclick="funcao()" value="Acessar">
+                </div>
+                <div class="link">
+                    <a href="login.html" class="login-link" style="color: white;">Já tem uma conta? Faça login</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
