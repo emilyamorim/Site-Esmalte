@@ -3,11 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 
 body {
     background-color: #fbe8e7;
+    font-family: 'Afacad', sans-serif;
 }
 /* MENU */
 header {
@@ -320,22 +323,17 @@ header {
 }
 
 /* PRINCIPAIS MARCAS */
-.marca h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #e6e6fa;
-}
-
 .marcas {
     padding: 20px;
-    text-align: left;
+    text-align: center;
     background-color: #E6E6FA;
+    /* font-family: 'Abril Fatface', sans-serif; */
 }
 
 .marcas h2{
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 20px;
-    color: #333;
+    color: #d63384;
 }
 
 .marca-container {
@@ -392,6 +390,7 @@ header {
     right: 15px;
     font-size: 25px;
     color:#d63384;
+    text-decoration: none;
 }
 
 /* Responsividade para telas menores */
@@ -609,7 +608,6 @@ header {
     background: #A8A8E9;
     color: #fff;
     padding: 40px 20px;
-    font-family: 'Arial', sans-serif;
 }
 
 .footer-container {

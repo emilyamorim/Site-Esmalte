@@ -4,16 +4,92 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Cadastro</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css">
     <link rel='stylesheet' type='text/css' media='screen' href='../css/cadastro.css'>
-    <script src='../js/main.js'></script>
+    <script src='../js/index.js'></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
     </style>
 </head>
 
 <body>
+
+    <!--MENU-->
+    <header>
+        <div class="logo">
+            <img src="../image/logo_oficial_1.png" alt="Unhas Perfeitas">
+        </div>
+        <div class="menu-search-container">
+            <nav>
+                <ul class="nav-menu">
+                    <li class="dropdown">
+                        <a href="">Marcas</a>
+                        <ul class="dropdown-menu">
+                            <li class="marcas"><a href="">Rísque</a></li>
+                            <li><a href="">Coloroma</a></li>
+                            <li><a href="">Impala</a></li>
+                            <li><a href="">Dailus</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="">Destaque</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Produtos em Destaque</a></li>
+                            <li><a href="">Novidades</a></li>
+                            <li><a href="">Mais Vendidos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar">
+                <button><i class="fi fi-rr-search"></i></button>
+            </div>
+        </div>
+
+        <div class="menu-hamburguer">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!--MENU EM MOBILE-->
+    <div class="mobile-menu">
+        <span class="close-menu"><i class="fi fi-rr-rectangle-xmark"></i></span>
+        <ul>
+            <li class="dropdown">
+                <a href="#">Marcas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Rísque</a></li>
+                    <li><a href="#">Colorama</a></li>
+                    <li><a href="#">Impala</a></li>
+                    <li><a href="#">Dailus</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Destaque</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Produtos em Destaque</a></li>
+                    <li><a href="#">Novidades</a></li>
+                    <li><a href="#">Mais Vendidos</a></li>
+                </ul>
+            </li>
+    </ul>
+    </div>
+
+    <div class="overlay"></div>
+
+    <!-- FORMULÁRIO DE CADASTRO -->
     <div class="container">
         <div class="telacad">
             <form action="">
@@ -46,6 +122,40 @@
             </form>
         </div>
     </div>
+
+    <!--RODAPE-->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Coluna da Esquerda -->
+            <div class="footer-left">
+                <img src="../image/logo_esmalte (9) 1 (1).png" alt="Logo Unhas Perfeitas" class="footer-logo">
+                <div class="footer-bottom">
+                    <p>© 2025 Unhas Perfeitas. Todos os direitos reservados.</p>
+                    <div class="footer-links">
+                        <a href="#">Sobre Nós</a>
+                        <a href="#">Termos de Uso</a>
+                        <a href="#">Política de Privacidade</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Coluna da Direita -->
+            <div class="footer-right">
+                <p class="follow-us">SIGA-NOS:</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="developers">
+            <p>Desenvolvido com ❤️ por 
+                <a href="#" target="_blank">Emily Amorim</a>, <a href="#" target="_blank">Giseliane Lima</a>,
+                <a href="#" target="_blank">Iasmim Galdino</a> e <a href="#" target="_blank">Mariana Vitória</a></p>
+        </div>
+    </footer>
 </body>
 
 </html>
