@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     font-family: afacad;
@@ -18,7 +18,7 @@ header {
 
 header nav ul {
     list-style-type: none;
-    /* Remove os marcadores de lista */
+    
     padding-left: 0;
 }
 
@@ -107,4 +107,4 @@ input::placeholder {
     .menu-container{
         display: none;
     }
-}
+} */

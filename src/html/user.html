@@ -6,9 +6,19 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Olá, XXX!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='../css/user.css'> -->
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='../css/navbar.css'> -->
     <link rel='stylesheet' type='text/css' media='screen' href='../css/user.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/navbar.css'>
-    <script defer src='../js/navbar.js'></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <!-- <script defer src='../js/navbar.js'></script> -->
     <script defer src='../js/user.js'></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
@@ -16,6 +26,76 @@
 </head>
 
 <body>
+    <!--MENU-->
+    <header>
+        <div class="logo">
+            <img src="../image/logo_oficial_1.png" alt="Unhas Perfeitas">
+        </div>
+        <div class="menu-search-container">
+            <nav>
+                <ul class="nav-menu">
+                    <li class="dropdown">
+                        <a href="">Marcas</a>
+                        <ul class="dropdown-menu">
+                            <li class="marcas"><a href="">Rísque</a></li>
+                            <li><a href="">Coloroma</a></li>
+                            <li><a href="">Impala</a></li>
+                            <li><a href="">Dailus</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="dropdown">
+                        <a href="">Destaque</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Produtos em Destaque</a></li>
+                            <li><a href="">Novidades</a></li>
+                            <li><a href="">Mais Vendidos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar">
+                <button><i class="fi fi-rr-search"></i></button>
+                <a href="carrinho.html"><i class="fi fi-rr-shopping-cart"></i></a>
+                <a href="favoritos.html"><i class="fi fi-rr-heart"></i></a>
+            </div>
+        </div>
+    
+        <div class="menu-hamburguer">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    
+    <!--MENU EM MOBILE-->
+    <div class="mobile-menu">
+        <span class="close-menu"><i class="fi fi-rr-rectangle-xmark"></i></span>
+        <ul>
+            <li class="dropdown">
+                <a href="#">Marcas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Rísque</a></li>
+                    <li><a href="#">Colorama</a></li>
+                    <li><a href="#">Impala</a></li>
+                    <li><a href="#">Dailus</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Destaque</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Produtos em Destaque</a></li>
+                    <li><a href="#">Novidades</a></li>
+                    <li><a href="#">Mais Vendidos</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="overlay"></div>
+
+
     <main>
         <div class="container">
             <div>

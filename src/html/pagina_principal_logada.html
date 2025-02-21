@@ -11,13 +11,9 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Afacad:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
@@ -51,19 +47,21 @@
                         </ul>
                     </li>
 
-                    <li>
-                        <a href="../html/cadastro.html">
-                            <span class="user-name">Emily Amorim</span>
-                            <i class="fi fi-sr-circle-user"></i>
+                    <li class="user-info">
+                        <a href="user.html">
+                            <span class="user-name">Maria</span>
+                            <i class="fi fi-rr-circle-user"></i> 
                         </a>
                     </li>
                 </ul>
             </nav>
+
+            <!-- Barra de pesquisa e ícones -->
             <div class="search-bar">
                 <input type="text" placeholder="Buscar">
                 <button><i class="fi fi-rr-search"></i></button>
-                <a href=""><i class="fi fi-rr-heart"></i></a>
-                <a href=""><i class="fi fi-sr-shopping-cart"></i></a>
+                <a href="favoritos.html"><i class="fi fi-rr-heart"></i></a>
+                <a href="carrinho.html"><i class="fi fi-rr-shopping-cart"></i></a>
             </div>
         </div>
 
@@ -78,6 +76,12 @@
     <div class="mobile-menu">
         <span class="close-menu"><i class="fi fi-rr-rectangle-xmark"></i></span>
         <ul>
+            <li class="user-info">
+                <a href="../html/cadastro.html">
+                    <span class="user-name">Maria</span>
+                    <i class="fi fi-ts-circle-user"></i> <!-- Ícone de perfil -->
+                </a>
+            </li>
             <li class="dropdown">
                 <a href="#">Marcas</a>
                 <ul class="dropdown-menu">
@@ -95,7 +99,7 @@
                     <li><a href="#">Mais Vendidos</a></li>
                 </ul>
             </li> 
-    </ul>
+        </ul>
     </div>
 
     <div class="overlay"></div>
