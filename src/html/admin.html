@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Olá, XXX!</title>
+    <title>Olá Administrador!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type='text/css' media='screen' href='../css/user.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/navbar.css'>
@@ -31,9 +31,7 @@
             <div class="info-container">
                 <div class="tabs">
                     <button class="tab-button active" onclick="openTab(event, 'dados-pessoais')">Dados Pessoais</button>
-                    <button class="tab-button" onclick="openTab(event, 'pedidos')">Pedidos</button>
-                    <button class="tab-button" onclick="openTab(event, 'enderecos')">Endereços</button>
-                    <button class="tab-button" onclick="openTab(event, 'cartoes')">Cartões</button>
+                    <button class="tab-button" onclick="openTab(event, 'pedidos')">Gerênciar Produtos</button>
                 </div>
 
                 <div id="dados-pessoais" class="tab-content active">
@@ -73,28 +71,11 @@
                 </div>
 
                 <div id="pedidos" class="tab-content">
-                    <h1>Pedidos</h1>
-                    <p>Lista de pedidos realizados.</p>
-                    <div class="pedidos-container">
-                        <nav class="pedidos-nav">
-                            <div>Tudo</div>
-                            <div>A pagar</div>
-                            <div>Preparando</div>
-                            <div>A caminho</div>
-                            <div>Finalizado</div>
-                        </nav>
-                    </div>
+                    <h1>Gerencie os Produtos </h1>
+                    <p>Lista de produtos contidos no site.</p>
                 </div>
 
-                <div id="enderecos" class="tab-content">
-                    <h2>Endereços</h2>
-                    <p>Endereços cadastrados.</p>
-                </div>
-
-                <div id="cartoes" class="tab-content">
-                    <h2>Cartões</h2>
-                    <p>Cartões de pagamento salvos.</p>
-                </div>
+                
 
                 <script src="script.js"></script>
             </div>
