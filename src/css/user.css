@@ -15,8 +15,8 @@ header {
     align-items: center;
     background-color: #F8BBD0;
     padding: 15px;
-    position: relative;
     z-index: 10;
+    position: relative;
 }
 
 .logo {
@@ -58,7 +58,7 @@ header {
 }
 
 .nav-menu li a:hover {
-    background: #6f7b9e; 
+    background: #6f7b9e;
 }
 
 /* Barra de Pesquisa */
@@ -71,10 +71,10 @@ header {
 .search-bar input {
     padding: 10px;
     border: none;
-    border-radius: 20px; 
+    border-radius: 20px;
     width: 200px;
     font-size: 14px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -87,11 +87,11 @@ header {
     border-radius: 40%;
     color: white;
     margin: 15px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .search-bar button:hover {
-    background: #a82a6b; 
+    background: #a82a6b;
 }
 
 /* Ícones de coração, carrinho e perfil*/
@@ -109,7 +109,7 @@ header {
 }
 
 /* Estilizando menu suspenso */
-.dropdown-menu  {
+.dropdown-menu {
     display: none;
     position: absolute;
     min-width: 150px;
@@ -153,12 +153,12 @@ header {
 
 .dropdown:hover .dropdown-menu {
     display: block;
-    opacity: 1; 
+    opacity: 1;
     transform: translateY(0);
 }
 
 /* MENU EM MOBILE */
- .menu-hamburguer {
+.menu-hamburguer {
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -185,7 +185,7 @@ header {
     z-index: 1001;
 }
 
-.mobile-menu .menu-aberto{
+.mobile-menu .menu-aberto {
     right: 0;
 }
 
@@ -207,7 +207,7 @@ header {
 }
 
 .mobile-menu .dropdown-menu {
-    display: none; 
+    display: none;
     background: #A8A8E9;
     padding-left: 20px;
 }
@@ -273,11 +273,11 @@ header {
     }
 
     .dropdown-menu {
-        display: block !important; 
+        display: block !important;
         opacity: 1;
         transform: translateY(0);
-        position: static; 
-        background: none; 
+        position: static;
+        background: none;
         box-shadow: none;
     }
 
@@ -288,19 +288,19 @@ header {
 
     .menu-search-container {
         flex-direction: column;
-        align-items: flex-start; 
+        align-items: flex-start;
         width: 100%;
     }
 
     .nav-menu {
-      flex-direction: column;
-      margin-right: 0; 
+        flex-direction: column;
+        margin-right: 0;
     }
 
     .search-bar {
-        width: 100%; 
-        margin-top: 5px; 
-        justify-content: center; 
+        width: 100%;
+        margin-top: 5px;
+        justify-content: center;
     }
 
     .search-bar button {
@@ -313,28 +313,65 @@ header {
 }
 
 
+/* ========== MAIN CONTENT ========== */
 main {
-    display: flex;
-    gap: 40px;
     max-width: 1030px;
     margin: auto;
+    padding: 20px;
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 40px;
+    margin-top: 3em;
 }
 
+.user-area {
+    border: 1px solid blue;
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    height: fit-content;
+}
+
+.user-area div{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.info-container {
+    border: 1px solid rgb(255, 47, 47);
+    flex: 1;
+}
+
+.user-area h1 {
+    color: #D15180;
+    margin: 20px 0;
+}
+
+.user-area button {
+    display: block;
+    border: 2px solid #D15180;
+    background-color: white;
+    color: #D15180;
+    font-size: 18px;
+    border-radius: 30px;
+    width: 100%;
+    padding: 10px;
+    margin: 15px auto;
+    cursor: pointer;
+}
+
+/* ========== TABS ========== */
 .tabs {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    
 }
 
 .tab-button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     background-color: lightgray;
     cursor: pointer;
@@ -351,7 +388,6 @@ main {
 .tab-content {
     display: none;
     padding: 20px;
-    border: 1px solid #ccc;
 }
 
 .tab-content.active {
@@ -359,106 +395,199 @@ main {
     color: #D15180;
 }
 
-.tab-content.active form {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-}
-
-.tab-content.active form div {
-    margin-top: 2em;
-}
-
-.tab-content.active form div input {
-    margin-bottom: 15px;
-    border: 0.1em solid gainsboro;
-    border-radius: 1em;
-    height: 2em;
-    width: 15em;
-
-}
-
-.info-container {
-    border: 1px solid rgb(255, 47, 47);
-    flex: 1;
-}
-
-.user-area {
-    border: 1px solid blue;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.user-foto {
-    /* Ellipse 1 */
-    width: 220px;
-    margin: auto;
-    height: 210.69px;
-    border-radius: 100%;
-    background: linear-gradient(180deg, #F8BBD0 0%, #A8A8E9 100%);
-}
-
-.user-area h1 {
-    color: #D15180;
-    margin-top: 20px;
-}
-
-.user-area button {
-    display: block;
-    border-color: #D15180;
-    background-color: white;
-    color: #D15180;
-    font-size: 20px;
-    border-radius: 6em;
-    width: 9em;
-    height: 2em;
-    margin: auto;
-    margin-top: 1.5em;
-}
-
-.user-area button:hover {
-    border-color: #A8A8E9;
-}
-
-/*Seção Pedidos*/
-
-.pedidos-container {}
-
+/* ========== PEDIDOS (Layout Original) ========== */
 .pedidos-nav {
-    border-bottom: 0.2em solid #D15180;
-    border-top: 0.2em solid #D15180;
     display: flex;
     justify-content: space-around;
-    padding: 4px;
+    border-top: 2px solid #D15180;
+    border-bottom: 2px solid #D15180;
+    margin: 20px 0;
 }
 
 .pedidos-nav div {
-    background-color: #883251;
-    padding: 10px;
-
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 1;
+    text-align: center;
+    background: #eeeeee;
 }
 
 .pedidos-nav div:hover {
-    background-color: #A8A8E9;
+    background: #A8A8E9;
+    color: white;
 }
 
-@media screen and (max-width: 1080px) {
-    main {
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.table-container img {
+    width: 100px;
+    height: auto;
+}
+
+/* ========== ENDEREÇOS (Layout Original) ========== */
+.enderecos .table-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.enderecos .table-container>div:first-child {
+    flex: 1;
+    text-align: left;
+}
+
+.enderecos .align-right {
+    text-align: right;
+    margin-left: 40px;
+}
+
+/* ========== CARTÕES (Layout Original) ========== */
+.cartoes .table-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartoes .table-container>div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.imgBandeiras {
+    width: 60px;
+    height: auto;
+}
+
+/* ========== FORMULÁRIO ========== */
+.tab-content.active form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.tab-content.active form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+button[type="submit"] {
+    background-color: #D15180;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 1024px) {
+    .container {
         flex-direction: column;
     }
 
+    .user-area {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
     .tab-content.active form {
-        display: grid;
         grid-template-columns: 1fr;
-        row-gap: none;
     }
 
-    .tab-content.active form div {
-        margin-top: 0em;
+    .enderecos .align-right {
+        text-align: left;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
     }
 
-    .tab-content.active p {
-        margin-bottom: 2em;
+    .menu-hamburguer {
+        display: flex;
     }
 
+    .search-bar input {
+        width: 100%;
+    }
+
+    .pedidos-nav {
+        flex-wrap: wrap;
+    }
+
+    .pedidos-nav div {
+        flex: 1 1 50%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .table-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-foto {
+        width: 180px;
+        height: 170px;
+    }
+
+    .tabs{
+        align-items: stretch;
+        
+    }
+
+    .tab-button {
+        max-width: 70%;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* ========== COMPONENTES COMUNS ========== */
+.erro {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.status {
+    padding: 15px;
+    margin: 1em 0;
+    border-radius: 5px;
+    display: none;
+}
+
+.status.valido {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.invalido {
+    background: #f8d7da;
+    color: #721c24;
+    display: block;
 }
