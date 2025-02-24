@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileMenu.classList.remove("menu-aberto");
         overlay.classList.remove("active");
 
-        // Fechar todos os dropdowns  ao fechar o menu
+        // Fechar todos os dropdowns ao fechar o menu
         document.querySelectorAll(".dropdown-menu").forEach(menu => {
             menu.style.display = "none";
         });
@@ -57,56 +57,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//Autenticação de javascript
+//Autenticar Login
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
+        e.preventDefault(); // Previne o recarregamento da página
+
         // Obtém os valores dos inputs
-        const nome = document.querySelector('input[name="nome"]').value.trim();
-        const email = document.querySelector('input[name="email"]').value.trim();
+        const email = document.getElementById('email').value.trim();
         const senha = document.querySelector('input[name="senha"]').value;
-        const senhaconf = document.querySelector('input[name="senhaconf"]').value;
-    
+
         // Verifica se os campos não estão vazios
-        if (!nome || !email || !senha || !senhaconf) {
+        if (!email || !senha) {
             alert("Preencha todos os campos!");
             return;
         }
-    
-        // Valida se as senhas coincidem
-        if (senha !== senhaconf) {
-            alert("As senhas não coincidem!");
-            return;
-        }
-    
-        // Validação da senha: mínimo 8 caracteres, pelo menos uma letra maiúscula, um número e um caractere especial
-        const senhaRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
-        if (!senhaRegex.test(senha)) {
-            alert("A senha deve ter no mínimo 8 caracteres, incluir pelo menos uma letra maiúscula, um número e um caractere especial.");
-            return;
-        }
-    
-        // Se passou nas validações, pode enviar os dados
-        autenticarCadastro({ nome, email, senha });
-    });
 
-    function autenticarCadastro(dados) {
-        // Simulação: armazena os dados do usuário no localStorage
-        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-      
-        // Verifica se o e-mail já foi cadastrado
-        const usuarioExistente = usuarios.find(user => user.email === dados.email);
-        if (usuarioExistente) {
-            alert("E-mail já cadastrado!");
+        // Recupera os usuários armazenados no localStorage
+        const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+        // Procura o usuário com o e-mail informado
+        const usuarioEncontrado = usuarios.find(user => user.email === email);
+
+        // Se não encontrar ou se a senha estiver incorreta, exibe mensagem genérica de erro
+        if (!usuarioEncontrado || usuarioEncontrado.senha !== senha) {
+            alert("E-mail ou senha inválidos!");
             return;
         }
-      
-        usuarios.push(dados);
-        localStorage.setItem('usuarios', JSON.stringify(usuarios));
-        alert("Cadastro realizado com sucesso!");
-        
-        console.log("Usuário cadastrado, redirecionando...");
+
+        alert("Login realizado com sucesso!");
         window.location.href = "pagina_principal_logada.html";
-    }
-});
-
+    });
+}); 
