@@ -401,6 +401,28 @@ main {
 
 }
 
+/* Estilização dos inputs em foco */
+
+.tab-content.active form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: all 0.3s ease; 
+}
+
+.tab-content.active form input:focus {
+    outline: none;
+    border-color: #D15180;
+    box-shadow: 0 0 0 3px rgba(209, 81, 128, 0.2);
+}
+
+.tab-content.active form input:focus-visible {
+    outline: 2px solid #D15180;
+    outline-offset: 2px;
+}
+
 /* ========== PEDIDOS (Layout Original) ========== */
 .pedidos-nav {
     display: flex;
@@ -475,33 +497,21 @@ main {
 }
 
 /* ========== FORMULÁRIO ========== */
-.tab-content.active form {
+.tab-content.active .form-dados-pessoais {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
 
-.tab-content.active form input {
+.tab-content.active .form-dados-pessoais input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 5px 0;
-    transition: all 0.3s ease; 
 }
 
-.tab-content.active form input:focus {
-    outline: none;
-    border-color: #D15180;
-    box-shadow: 0 0 0 3px rgba(209, 81, 128, 0.2);
-}
-
-.tab-content.active form input:focus-visible {
-    outline: 2px solid #D15180;
-    outline-offset: 2px;
-}
-
-button[type="submit"] {
+.form-dados-pessoais button[type="submit"] {
     background-color: #D15180;
     color: white;
     border: none;
@@ -615,6 +625,14 @@ table {
     margin-top: 1em;
 }
 
+.table-listar table {
+    width: 100%;
+}
+.table-listar button {
+    border: none;
+    cursor: pointer;
+}
+
 th,
 td {
     padding: 8px;
@@ -635,101 +653,138 @@ tr:hover {
     margin-top: 1em;
 }
 
+.form-add-produto {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.last-child {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.form-add-produto input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.form-add-produto .form-button-container {
+    display: flex;
+    flex: 1;
+    margin-left: auto;
+}
+
+.form-add-produto button[type="submit"] {
+    background-color: #D15180;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
 /* Rodapé */
 .footer {
-    background: #A8A8E9;
-color: #fff;
-padding: 40px 20px;
+        background: #A8A8E9;
+    color: #fff;
+    padding: 40px 20px;
 }
 
 .footer-container {
-max-width: 1200px;
-margin: 0 auto;
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-flex-wrap: wrap;
-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 /* Coluna da Esquerda */
 .footer-left {
-flex: 1;
-min-width: 250px;
+    flex: 1;
+    min-width: 250px;
 }
 
 .footer-logo {
-width: 150px;
-margin-bottom: 20px;
+    width: 150px;
+    margin-bottom: 20px;
 }
 
 .footer-bottom p {
-margin: 5px 0;
-font-size: 0.9rem;
+    margin: 5px 0;
+    font-size: 0.9rem;
 }
 
 .footer-links {
-margin-top: 10px;
+    margin-top: 10px;
 }
 
 .footer-links a {
-color: #fff;
-text-decoration: none;
-margin-right: 15px;
-font-size: 0.9rem;
-transition: opacity 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
 }
 
 .footer-links a:hover {
-opacity: 0.8;
+    opacity: 0.8;
 }
 
 /* Coluna da Direita */
 .footer-right {
-flex: 1;
-min-width: 200px;
-text-align: right;
+    flex: 1;
+    min-width: 200px;
+    text-align: right;
 }
 
 .follow-us {
-font-size: 1.1rem;
-font-weight: bold;
-margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .social-icons {
-display: flex;
-justify-content: flex-end;
-gap: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
 }
 
 .social-icon {
-color: #fff;
-font-size: 1.5rem;
-transition: transform 0.3s ease, color 0.3s ease;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-transform: translateY(-5px);
-color: #d63384;
+    transform: translateY(-5px);
+    color: #d63384;
 }
 
 /* Área dos Desenvolvedores */
 .developers {
-text-align: center;
-margin-top: 30px;
-padding-top: 20px;
-border-top: 1px solid rgba(255, 255, 255, 0.1);
-font-size: 0.9rem;
-color: #fff;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #fff;
 }
 
 .developers a {
-color: #a82a6b;
-text-decoration: none;
-transition: opacity 0.3s ease;
+    color: #a82a6b;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
 }
 
 .developers a:hover {
-opacity: 0.8;
+    opacity: 0.8;
 }
