@@ -56,57 +56,68 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
-//Autenticação de javascript
+//Autenticar cadastro
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
+        e.preventDefault(); // Previne o recarregamento da página
+
         // Obtém os valores dos inputs
         const nome = document.querySelector('input[name="nome"]').value.trim();
         const email = document.querySelector('input[name="email"]').value.trim();
         const senha = document.querySelector('input[name="senha"]').value;
         const senhaconf = document.querySelector('input[name="senhaconf"]').value;
-    
+        const tipo = document.querySelector('select[name="tipo"]').value; 
+
         // Verifica se os campos não estão vazios
-        if (!nome || !email || !senha || !senhaconf) {
+        if (!nome || !email || !senha || !senhaconf || !tipo) {
             alert("Preencha todos os campos!");
             return;
         }
-    
+
         // Valida se as senhas coincidem
         if (senha !== senhaconf) {
             alert("As senhas não coincidem!");
             return;
         }
-    
+
         // Validação da senha: mínimo 8 caracteres, pelo menos uma letra maiúscula, um número e um caractere especial
         const senhaRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
         if (!senhaRegex.test(senha)) {
             alert("A senha deve ter no mínimo 8 caracteres, incluir pelo menos uma letra maiúscula, um número e um caractere especial.");
             return;
         }
-    
-        // Se passou nas validações, pode enviar os dados
-        autenticarCadastro({ nome, email, senha });
+
+        // Envia os dados para serem armazenados
+        autenticarCadastro({ nome, email, senha, tipo });
     });
 
     function autenticarCadastro(dados) {
-        // Simulação: armazena os dados do usuário no localStorage
+        // Obtém a lista de usuários cadastrados
         let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-      
+
         // Verifica se o e-mail já foi cadastrado
         const usuarioExistente = usuarios.find(user => user.email === dados.email);
         if (usuarioExistente) {
             alert("E-mail já cadastrado!");
             return;
         }
-      
+
+        // Adiciona o novo usuário
         usuarios.push(dados);
         localStorage.setItem('usuarios', JSON.stringify(usuarios));
         alert("Cadastro realizado com sucesso!");
-        
+
+        // Armazena o usuário na sessão
+        sessionStorage.setItem('usuarioLogado', JSON.stringify(dados));
+
         console.log("Usuário cadastrado, redirecionando...");
-        window.location.href = "pagina_principal_logada.html";
+
+        // Redireciona de acordo com o tipo de usuário
+        if (dados.tipo === 'admin') {
+            window.location.href = "admin.html";
+        } else {
+            window.location.href = "pagina_principal_logada.html";
+        }
     }
 });
 

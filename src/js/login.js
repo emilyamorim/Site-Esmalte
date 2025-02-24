@@ -84,7 +84,14 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        alert("Login realizado com sucesso!");
-        window.location.href = "pagina_principal_logada.html";
+        // Armazena o usuário na sessão
+        sessionStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
+
+        // Redireciona com base no tipo de usuário
+        if (usuarioEncontrado.tipo === 'admin') {
+            window.location.href = "admin.html";
+        } else {
+            window.location.href = "pagina_principal_logada.html";
+        }
     });
-}); 
+});
